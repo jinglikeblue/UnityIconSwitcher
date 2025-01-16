@@ -23,7 +23,7 @@ namespace IconSwitch
 
 
 #if UNITY_IPHONE
-        [DllImport("__Internal")]
+        [System.Runtime.InteropServices.DllImport("__Internal")]
         static extern void SwitchAppIcon(string iconName);
 #endif
 
@@ -106,7 +106,7 @@ namespace IconSwitch
 #endif
             
 #if UNITY_IPHONE
-            UseIcon(IconNames[index]);
+            SwitchAppIcon(IconNames[index]);
 #endif
         }
 

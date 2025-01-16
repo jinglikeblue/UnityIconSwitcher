@@ -75,3 +75,4 @@ crashlytics-build.properties
 /NativeProjects
 /素材
 /.idea
+.DS_Store

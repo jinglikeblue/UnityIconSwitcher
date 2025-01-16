@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using IconSwitch;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,20 +27,8 @@ public class Launcher : MonoBehaviour
 
     void SwitchIcon(int idx)
     {
-        // Debug.Log($"Switch Icon Index: {idx}");
-        // for (int i = 0; i < buttons.Count; i++)
-        // {
-        //     buttons[i].interactable = i != idx;
-        // }
-        
         textInfo.text = $"使用的Icon: {idx}";
         
         IconSwicher.UseIcon(idx);
-    }
-
-    private void OnApplicationPause(bool pauseStatus)
-    {
-        Debug.Log($"OnApplicationPause: {pauseStatus}");
-        IconSwicher.Refresh();
     }
 }

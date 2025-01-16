@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace IconSwitch
@@ -16,12 +15,12 @@ namespace IconSwitch
         public static readonly string[] IconNameConfigs = new string[] { "icon_1", "icon_2" };
 
         public static readonly string[] IconNames = null;
-        
+
         /// <summary>
         /// 为false时Refresh不会生效。一般进入战斗时，不允许Refresh执行
         /// </summary>
         public static bool refreshEnable = true;
-        
+
 
 #if UNITY_IPHONE
         [DllImport("__Internal")]
@@ -85,14 +84,6 @@ namespace IconSwitch
         private static int toUseIconIndex = -1;
 
         /// <summary>
-        /// 使用默认的Icon
-        /// </summary>
-        public static void UseDefaultIcon()
-        {
-            toUseIconIndex = 0;
-        }
-
-        /// <summary>
         /// 实用指定索引对应的Icon
         /// </summary>
         /// <param name="alias"></param>
@@ -102,7 +93,7 @@ namespace IconSwitch
             {
                 return;
             }
-            
+
             if (index < 0 || index >= IconNames.Length)
             {
                 index = 0;
@@ -110,25 +101,12 @@ namespace IconSwitch
 
             toUseIconIndex = index;
 
+#if UNITY_ANDROID
+            AndroidIconSwitchComponent.Create();
+#endif
+            
 #if UNITY_IPHONE
             UseIcon(IconNames[index]);
-#endif
-
-// #if UNITY_ANDROID
-//             Refresh();
-// #endif
-        }
-
-        public static void UseIcon(string name)
-        {
-            Debug.Log($"[Icon Switcher] 使用的图标配置: {name}");
-
-#if UNITY_EDITOR
-            return;
-#endif
-
-#if UNITY_IPHONE
-            SwitchAppIcon(name);
 #endif
         }
 

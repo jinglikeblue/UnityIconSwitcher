@@ -73,3 +73,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /NativeProjects
 /素材
+/.idea

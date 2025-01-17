@@ -87,6 +87,7 @@ namespace IconSwitch
             {
                 Debug.Log($"[Icon Switcher][打包结束] 构建Android包体之后的处理");
                 AfterAndroidAppPackageBuild();
+                AssetDatabase.Refresh();
                 return;
             }
 

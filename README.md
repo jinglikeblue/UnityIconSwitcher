@@ -59,3 +59,7 @@ Android下切换图标不能立刻生效，因为会导致APP闪退。这里的�
 
 如果Android构建时是直接导出包体，那么需要确保Plugins/Android目录下，至少存在LauncherManifest.xml或者AndroidManifest.xml其中之一。
 
+## 附录
+
+【在线Icon生成工具】https://icon.wuruihong.com/
+

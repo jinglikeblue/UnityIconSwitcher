@@ -2,7 +2,7 @@
 
 >Unity项目实现的iOS和Android平台下，应用图标切换功能的插件
 
-该库位Demo程序。其中`Assets/IconSwitcher`目录是插件，拷贝该目录到自己项目即可。
+该库为Demo程序。其中`Assets/IconSwitcher`目录是插件，拷贝该目录到自己项目即可。
 
 【演示视频】 https://www.bilibili.com/video/BV1SHwneKEHc/?share_source=copy_web&vd_source=dabc4849ffa10d0cfa57ccd69607f8a4
 

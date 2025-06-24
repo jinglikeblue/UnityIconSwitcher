@@ -116,7 +116,7 @@ namespace IconSwitch
 
         private static string[] GetIconNames()
         {
-            return IconSwicher.IconNameConfigs;
+            return IconSwitcher.IconNameConfigs;
             return File.ReadAllLines(IconSwitcherRootPath + "/icon_config.txt");
         }
 

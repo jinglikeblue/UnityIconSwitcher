@@ -26,9 +26,9 @@ public class AndroidIconSwitchComponent : MonoBehaviour
     private void OnApplicationPause(bool pauseStatus)
     {
         Debug.Log($"[Icon Switcher][前后台切换] 进行图标切换刷新");
-        if (IconSwicher.refreshEnable)
+        if (IconSwitcher.refreshEnable)
         {
-            IconSwicher.Refresh();
+            IconSwitcher.Refresh();
             Destroy(gameObject);
         }
     }

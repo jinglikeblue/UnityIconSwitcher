@@ -29,6 +29,6 @@ public class Launcher : MonoBehaviour
     {
         textInfo.text = $"使用的Icon: {idx}";
         
-        IconSwicher.UseIcon(idx);
+        IconSwitcher.UseIcon(idx);
     }
 }

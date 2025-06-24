@@ -7,10 +7,11 @@ namespace IconSwitch
     /// <summary>
     /// 图标切换实用工具
     /// </summary>
-    public static class IconSwicher
+    public static class IconSwitcher
     {
         /// <summary>
         /// 图标名字配置
+        /// 索引0表示的是默认图标。索引1开始依次对应IconNameConfigs中的值。
         /// </summary>
         public static readonly string[] IconNameConfigs = new string[] { "icon_1", "icon_2" };
 
@@ -51,7 +52,7 @@ namespace IconSwitch
             return name;
         }
 
-        static IconSwicher()
+        static IconSwitcher()
         {
 #if UNITY_EDITOR
             IconNames = Array.Empty<string>();
